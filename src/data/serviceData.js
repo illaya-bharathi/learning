@@ -110,8 +110,8 @@ import software3 from "../assets/servicehero/software-3.png";
 
 export const PortalDevelopmentData = {
   hero: {
-    titleWord1: "Portal",
-    titleWord2: "Development",
+    titleWord1: "Portal Development",
+    titleWord2: "",
     subtitle: "Building intelligent portals that connect users, devices, data, and operations through a unified digital experience.",
     backgroundImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
     backgroundImages: [portal1, portal2, portal3]
@@ -587,8 +587,8 @@ export const productPrototypeHardwareDevelopmentData = {
 
 export const softwareSolutionsData = {
   hero: {
-    titleWord1: "Software",
-    titleWord2: "Solutions",
+    titleWord1: "Software Solutions",
+    titleWord2: "",
     subtitle: "Developing intelligent software platforms that power devices, automation systems, and connected operations.",
     backgroundImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=2070&q=80",
     backgroundImages: [software1, software2, software3]

@@ -7,19 +7,41 @@ import Ourprocess from "./Front/Ourprocess";
 const AnimatedLetters = ({ text, className = "", style = {}, delay = 0 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-10%" });
+  
+  const words = text.split(" ");
+  let globalCharIndex = 0;
+
   return (
-    <span ref={ref} style={{ display: "inline-block", overflow: "hidden", ...style }}>
-      {text.split("").map((char, i) => (
-        <motion.span
-          key={i}
-          style={{ display: "inline-block", whiteSpace: "pre" }}
-          initial={{ y: "110%", opacity: 0, rotateX: -40 }}
-          animate={isInView ? { y: "0%", opacity: 1, rotateX: 0 } : {}}
-          transition={{ duration: 0.55, delay: delay + i * 0.028, ease: [0.22, 1, 0.36, 1] }}
-          className={className}
-        >
-          {char}
-        </motion.span>
+    <span ref={ref} style={{ display: "inline-block", ...style }}>
+      {words.map((word, wordIndex) => (
+        <span key={wordIndex} style={{ display: "inline-block", whiteSpace: "nowrap" }}>
+          {word.split("").map((char, charIndex) => {
+            const i = globalCharIndex++;
+            return (
+              <motion.span
+                key={i}
+                style={{ display: "inline-block", whiteSpace: "pre" }}
+                initial={{ y: "110%", opacity: 0, rotateX: -40 }}
+                animate={isInView ? { y: "0%", opacity: 1, rotateX: 0 } : {}}
+                transition={{ duration: 0.55, delay: delay + i * 0.028, ease: [0.22, 1, 0.36, 1] }}
+                className={className}
+              >
+                {char}
+              </motion.span>
+            );
+          })}
+          {wordIndex < words.length - 1 && (
+            <motion.span
+              style={{ display: "inline-block", whiteSpace: "pre" }}
+              initial={{ y: "110%", opacity: 0, rotateX: -40 }}
+              animate={isInView ? { y: "0%", opacity: 1, rotateX: 0 } : {}}
+              transition={{ duration: 0.55, delay: delay + (globalCharIndex++) * 0.028, ease: [0.22, 1, 0.36, 1] }}
+              className={className}
+            >
+              {" "}
+            </motion.span>
+          )}
+        </span>
       ))}
     </span>
   );
@@ -309,7 +331,7 @@ const QuoteSlider = ({ quotes }) => {
   if (!current) return null;
 
   return (
-    <section ref={quoteRef} className="bg-black" style={{ height: "200vh" }}>
+    <section ref={quoteRef} className="relative bg-black" style={{ height: "200vh" }}>
       <div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center bg-black">
 
         {/* Animated Image */}
@@ -749,10 +771,10 @@ const ServiceTemplate = ({ data }) => {
             <div className="w-full">
               <div
                 className="font-bold tracking-wide"
-                style={{ fontSize: isMobile ? "40px" : "64px", marginBottom: "0px", lineHeight: "1.2" }}
+                style={{ fontSize: isMobile ? "clamp(26px, 7.5vw, 36px)" : "64px", marginBottom: "0px", lineHeight: "1.3" }}
               >
                 <AnimatedLetters text={hero.titleWord1} delay={0} />
-                {" "}
+                {isMobile ? <br /> : " "}
                 {hero.titleWord2 && <AnimatedLetters text={hero.titleWord2} delay={0.15} />}
               </div>
               <AnimatedWords
