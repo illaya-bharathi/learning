@@ -399,9 +399,9 @@ const Ourprocess = ({
         </div>
 
         {/* LEFT — Particle */}
-        <div style={{ flex: "0 0 50%", position: "relative", overflow: "hidden", zIndex: 0 }}>
+        <div style={{ flex: "0 0 50%", position: "relative", overflow: "hidden", zIndex: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
           <motion.div
-            style={{ position: "absolute", inset: 0 }}
+            style={{ width: "100%", height: "65vh", minHeight: "500px" }}
             animate={{ y: [-15, 15, -15] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
@@ -411,7 +411,7 @@ const Ourprocess = ({
 
         {/* RIGHT — Accordion List */}
         <div style={{ flex: "0 0 50%", position: "relative", display: "flex", alignItems: "center", justifyContent: "center", padding: "0 clamp(24px,4vw,64px)", zIndex: 10 }}>
-          <div style={{ width: "100%", maxWidth: 560, display: "flex", flexDirection: "column", gap: "12px" }}>
+          <div style={{ width: "100%", height: "65vh", minHeight: "500px", maxWidth: 560, display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px" }}>
             {desktopAccordionList}
           </div>
         </div>

@@ -885,8 +885,8 @@ const ServiceTemplate = ({ data }) => {
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
                 }}
-                className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-white m-0"
-                style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                className="font-bold tracking-tight mb-4 text-white m-0"
+                style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: isMobile ? "clamp(24px, 7.5vw, 36px)" : "48px", lineHeight: "1.2" }}
               >
                 {about.sectionTitle}
               </motion.h2>

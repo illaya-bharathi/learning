@@ -69,9 +69,9 @@ import mattMullenwegImg from "../assets/ourservice/MattMullenweg.png";
 import dieterRamsImg from "../assets/ourservice/DieterRams.png";
 import steveJobsImg from "../assets/ourservice/SteveJobs.png";
 import stm32Logo from "../assets/icon/stm32.png";
-import seekLogo from "../assets/icon/seeklogo.png";
 import loraLogo from "../assets/icon/loro.png";
 import threeDLogo from "../assets/icon/3d.png";
+import bluetoothLogo from "../assets/icon/bluetooth.png";
 import henryFordImg from "../assets/ourservice/HenryFord.png";
 import stephenHawkingImg from "../assets/ourservice/StephenHawking.jpg";
 import edwardBerardImg from "../assets/ourservice/Edward V. Berard,.jpg";
@@ -308,10 +308,8 @@ export const embeddedSystemDesignData = {
       { name: "FreeRTOS", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Logo_freeRTOS.png" },
       { name: "Linux", logo: "https://cdn.worldvectorlogo.com/logos/linux-tux.svg" },
       { name: "MQTT", logo: "https://mqtt.org/assets/img/mqtt-logo-transp.svg" },
-      { name: "Bluetooth", logo: "https://cdn.worldvectorlogo.com/logos/bluetooth.svg" },
-      { name: "Wi-Fi", logo: "https://cdn.worldvectorlogo.com/logos/wi-fi.svg" },
-      { name: "Altium Designer", logo: seekLogo },
-      { name: "KiCad", logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/KiCad-Logo.svg" },
+      { name: "Bluetooth", logo: bluetoothLogo },
+      { name: "Wi-Fi", logo: "https://cdn.worldvectorlogo.com/logos/wi-fi.svg" },      { name: "KiCad", logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/KiCad-Logo.svg" },
       { name: "VS Code", logo: "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" },
       { name: "Git", logo: "https://cdn.worldvectorlogo.com/logos/git-icon.svg" }
     ]
@@ -374,7 +372,7 @@ export const iotApplicationDevelopmentData = {
       { name: "Raspberry Pi", logo: "https://cdn.worldvectorlogo.com/logos/raspberry-pi.svg" },
       { name: "STM32", logo: stm32Logo },
       { name: "MQTT", logo: "https://mqtt.org/assets/img/mqtt-logo-transp.svg" },
-      { name: "Bluetooth", logo: "https://cdn.worldvectorlogo.com/logos/bluetooth.svg" },
+      { name: "Bluetooth", logo: bluetoothLogo },
       { name: "Wi-Fi", logo: "https://cdn.worldvectorlogo.com/logos/wi-fi.svg" },
       { name: "LoRa", logo: loraLogo },
       { name: "AWS", logo: "https://cdn.worldvectorlogo.com/logos/aws-2.svg" },
@@ -502,7 +500,6 @@ export const pcbDesignCircuitDevelopmentData = {
   technologies: {
     sectionTitle: "Technologies",
     logos: [
-      { name: "Altium Designer", logo: seekLogo },
       { name: "KiCad", logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/KiCad-Logo.svg" },
       { name: "EasyEDA", logo: "https://github.com/easyeda.png" },
       { name: "MATLAB", logo: "https://cdn.worldvectorlogo.com/logos/matlab.svg" },
@@ -568,7 +565,6 @@ export const productPrototypeHardwareDevelopmentData = {
       { name: "ESP32", logo: "https://cdn.worldvectorlogo.com/logos/espressif-systems.svg" },
       { name: "Arduino", logo: "https://cdn.worldvectorlogo.com/logos/arduino-1.svg" },
       { name: "Raspberry Pi", logo: "https://cdn.worldvectorlogo.com/logos/raspberry-pi.svg" },
-      { name: "Altium Designer", logo: seekLogo },
       { name: "KiCad", logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/KiCad-Logo.svg" },
       { name: "EasyEDA", logo: "https://github.com/easyeda.png" },
       { name: "C", logo: "https://cdn.worldvectorlogo.com/logos/c-1.svg" },
